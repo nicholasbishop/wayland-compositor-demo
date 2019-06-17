@@ -1,0 +1,3 @@
+wayland-compositor-demo
+protocols/*.c
+protocols/*.h
