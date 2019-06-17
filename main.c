@@ -7,7 +7,8 @@ void wl_compositor_create_surface() {}
 void wl_compositor_create_region() {}
 
 static struct wl_compositor_interface wl_compositor_impl = {
-    &wl_compositor_create_surface, &wl_compositor_create_region};
+    .create_surface = &wl_compositor_create_surface,
+    .create_region = &wl_compositor_create_region};
 
 static void compositor_bind(struct wl_client *client, void *data,
                             uint32_t version, uint32_t id) {
